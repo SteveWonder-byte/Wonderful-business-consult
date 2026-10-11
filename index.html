@@ -1,1 +1,1961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Wonderful Business Consult | Design & Printing in Juaso</title>
+
+    <meta name="description"
+          content="Wonderful Business Consult offers graphic design, printing, T-shirts, banners, wedding invitations, birthday flyers, church event designs, citations, prizes, envelopes and more in Juaso, Ghana.">
+
+    <meta name="theme-color" content="#0756b5">
+
+    <style>
+        /* =========================
+           GLOBAL SETTINGS
+        ========================== */
+
+        :root {
+            --blue: #0756b5;
+            --dark-blue: #063777;
+            --light-blue: #eaf3ff;
+            --green: #12a66a;
+            --dark-green: #087848;
+            --white: #ffffff;
+            --text: #263449;
+            --muted: #66758a;
+            --background: #f7faff;
+            --border: #e2eaf4;
+            --shadow: 0 12px 35px rgba(7, 47, 100, 0.09);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1140px, 92%);
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 45px;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--green);
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        h1, h2, h3 {
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: clamp(28px, 4vw, 42px);
+            color: var(--dark-blue);
+            margin-bottom: 18px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 15px;
+            border: 2px solid transparent;
+            transition: 0.25s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--green);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--dark-green);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            color: var(--blue);
+            background: var(--white);
+            border-color: var(--blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-blue);
+            transform: translateY(-3px);
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.97);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+        }
+
+        .navbar {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            min-width: 0;
+        }
+
+        .brand-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            color: white;
+            font-size: 23px;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--blue), var(--green));
+            flex-shrink: 0;
+        }
+
+        .brand-name {
+            color: var(--dark-blue);
+            font-weight: 900;
+            font-size: 17px;
+            line-height: 1.25;
+        }
+
+        .brand-name small {
+            display: block;
+            color: var(--green);
+            font-size: 10px;
+            letter-spacing: 2px;
+            margin-top: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 700;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--green);
+        }
+
+        .nav-cta {
+            background: var(--blue);
+            color: white !important;
+            padding: 11px 17px;
+            border-radius: 7px;
+        }
+
+        .nav-cta:hover {
+            background: var(--dark-blue);
+        }
+
+        .menu-toggle {
+            display: none;
+            border: none;
+            background: transparent;
+            color: var(--blue);
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           HERO SECTION
+        ========================== */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 95px 0 90px;
+            background:
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(18, 166, 106, 0.12),
+                    transparent 32%
+                ),
+                linear-gradient(135deg, #f5f9ff, #ffffff 65%);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(7, 86, 181, 0.05);
+            right: -100px;
+            bottom: -150px;
+        }
+
+        .hero-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 13px;
+            background: #e5f8ef;
+            color: var(--dark-green);
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.6px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 5.4vw, 63px);
+            letter-spacing: -2px;
+            color: var(--dark-blue);
+            margin-bottom: 23px;
+        }
+
+        .hero h1 span {
+            color: var(--green);
+        }
+
+        .hero-description {
+            font-size: 17px;
+            color: var(--muted);
+            max-width: 540px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .trust-points {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 30px;
+            color: var(--text);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .trust-points span::before {
+            content: "✓";
+            color: var(--green);
+            margin-right: 7px;
+            font-weight: 900;
+        }
+
+        .hero-visual {
+            position: relative;
+            min-height: 400px;
+            border-radius: 25px;
+            background: linear-gradient(
+                145deg,
+                var(--blue),
+                var(--dark-blue)
+            );
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 25px 60px rgba(6, 55, 119, 0.22);
+        }
+
+        .design-preview {
+            width: 100%;
+            max-width: 370px;
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+            transform: rotate(-2deg);
+        }
+
+        .preview-top {
+            padding: 30px 22px;
+            color: white;
+            background: linear-gradient(
+                135deg,
+                var(--green),
+                #087848
+            );
+        }
+
+        .preview-top small {
+            font-size: 10px;
+            letter-spacing: 2px;
+            font-weight: 800;
+        }
+
+        .preview-top h3 {
+            font-size: 27px;
+            margin: 12px 0;
+        }
+
+        .preview-top p {
+            font-size: 12px;
+        }
+
+        .preview-bottom {
+            padding: 24px 22px;
+        }
+
+        .preview-bottom h4 {
+            font-size: 19px;
+            color: var(--dark-blue);
+            margin-bottom: 10px;
+        }
+
+        .preview-bottom p {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .preview-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 17px;
+        }
+
+        .preview-tags span {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--blue);
+            background: var(--light-blue);
+            padding: 6px 9px;
+            border-radius: 5px;
+        }
+
+        .floating-note {
+            position: absolute;
+            bottom: 25px;
+            right: -12px;
+            background: white;
+            padding: 15px 18px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--dark-blue);
+        }
+
+        .floating-note span {
+            display: block;
+            color: var(--green);
+            font-size: 11px;
+            margin-top: 3px;
+        }
+
+        /* =========================
+           SERVICES
+        ========================== */
+
+        .services {
+            background: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 23px;
+        }
+
+        .service-card {
+            padding: 29px 25px;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            background: white;
+            transition: 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow);
+            border-color: rgba(18, 166, 106, 0.4);
+        }
+
+        .service-icon {
+            width: 58px;
+            height: 58px;
+            display: grid;
+            place-items: center;
+            border-radius: 13px;
+            background: var(--light-blue);
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            color: var(--dark-blue);
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .service-link {
+            display: inline-block;
+            margin-top: 17px;
+            color: var(--green);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        /* =========================
+           ABOUT SECTION
+        ========================== */
+
+        .about {
+            background: var(--background);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            align-items: center;
+            gap: 65px;
+        }
+
+        .about-visual {
+            min-height: 360px;
+            border-radius: 22px;
+            padding: 35px;
+            background: linear-gradient(
+                145deg,
+                #e0edff,
+                #dff8eb
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-graphic {
+            width: 100%;
+            max-width: 350px;
+            background: white;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .about-graphic .big-letter {
+            font-size: 75px;
+            font-weight: 900;
+            color: var(--blue);
+            line-height: 1;
+        }
+
+        .about-graphic h3 {
+            color: var(--dark-blue);
+            margin: 12px 0;
+            font-size: 23px;
+        }
+
+        .about-graphic p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .about-content h2 {
+            text-align: left;
+        }
+
+        .about-content > p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .about-list {
+            list-style: none;
+            display: grid;
+            gap: 13px;
+            margin: 24px 0 30px;
+        }
+
+        .about-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .check-icon {
+            flex-shrink: 0;
+            width: 23px;
+            height: 23px;
+            display: grid;
+            place-items: center;
+            background: #dff8eb;
+            color: var(--dark-green);
+            border-radius: 50%;
+            font-size: 13px;
+        }
+
+        /* =========================
+           BENEFITS
+        ========================== */
+
+        .benefits {
+            background: var(--white);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 25px 17px;
+            border-radius: 14px;
+            background: var(--background);
+        }
+
+        .benefit-icon {
+            font-size: 31px;
+            margin-bottom: 15px;
+        }
+
+        .benefit-card h3 {
+            color: var(--dark-blue);
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .benefit-card p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================
+           CALL TO ACTION
+        ========================== */
+
+        .cta-section {
+            padding: 75px 0;
+            background: linear-gradient(
+                120deg,
+                var(--dark-blue),
+                var(--blue)
+            );
+        }
+
+        .cta-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .cta-box h2 {
+            color: white;
+            max-width: 650px;
+            margin-bottom: 13px;
+        }
+
+        .cta-box p {
+            color: #dceaff;
+            max-width: 650px;
+        }
+
+        .cta-box .btn {
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+
+        /* =========================
+           CONTACT SECTION
+        ========================== */
+
+        .contact {
+            background: var(--background);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 35px;
+            align-items: stretch;
+        }
+
+        .contact-info {
+            padding: 35px;
+            border-radius: 18px;
+            background: linear-gradient(
+                145deg,
+                var(--blue),
+                var(--dark-blue)
+            );
+            color: white;
+        }
+
+        .contact-info h3 {
+            font-size: 25px;
+            margin-bottom: 14px;
+        }
+
+        .contact-info > p {
+            color: #dceaff;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+            margin-bottom: 23px;
+        }
+
+        .contact-item-icon {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            background: rgba(255, 255, 255, 0.14);
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+
+        .contact-item strong {
+            display: block;
+            margin-bottom: 3px;
+            font-size: 14px;
+        }
+
+        .contact-item a,
+        .contact-item span {
+            color: #dceaff;
+            font-size: 13px;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-form {
+            padding: 35px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-form h3 {
+            color: var(--dark-blue);
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .contact-form > p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 17px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--text);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: #fbfdff;
+            font: inherit;
+            font-size: 14px;
+            color: var(--text);
+            outline: none;
+            transition: border 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--blue);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form .btn {
+            width: 100%;
+            border: none;
+        }
+
+        .form-note {
+            color: var(--muted);
+            font-size: 11px;
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            padding: 30px 0;
+            background: #041f46;
+            color: white;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            font-weight: 900;
+            font-size: 16px;
+        }
+
+        .footer-brand span {
+            color: #4be0a0;
+        }
+
+        .footer-content p {
+            font-size: 12px;
+            color: #d0def2;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 17px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            color: #d0def2;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* =========================
+           FLOATING WHATSAPP BUTTON
+        ========================== */
+
+        .whatsapp-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 1500;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: #25d366;
+            color: white;
+            display: grid;
+            place-items: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            transition: transform 0.25s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+        }
+
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+            fill: currentColor;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================== */
+
+        @media (max-width: 950px) {
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .hero-grid {
+                gap: 30px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                gap: 35px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .section {
+                padding: 65px 0;
+            }
+
+            .navbar {
+                min-height: 70px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                padding: 22px 5%;
+                background: white;
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow);
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li a {
+                display: block;
+                padding: 13px 0;
+                font-size: 15px;
+            }
+
+            .nav-links .nav-cta {
+                text-align: center;
+                margin-top: 10px;
+                padding: 12px;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .hero h1 {
+                font-size: clamp(37px, 10vw, 54px);
+                letter-spacing: -1.5px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .hero-visual {
+                min-height: 350px;
+                padding: 25px;
+            }
+
+            .floating-note {
+                right: -5px;
+                bottom: 15px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-visual {
+                min-height: 300px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand-name {
+                font-size: 14px;
+            }
+
+            .brand-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+
+            .trust-points {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero-visual {
+                min-height: 320px;
+                padding: 20px;
+            }
+
+            .preview-top h3 {
+                font-size: 23px;
+            }
+
+            .services-grid,
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                padding: 25px 22px;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 25px 20px;
+            }
+
+            .whatsapp-float {
+                width: 56px;
+                height: 56px;
+                right: 15px;
+                bottom: 15px;
+            }
+
+            .section-heading {
+                margin-bottom: 32px;
+            }
+        }
+
+        /* Respect visitors who prefer reduced motion. */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+        <nav class="navbar container" aria-label="Main navigation">
+
+            <a href="#home" class="brand" aria-label="Wonderful Business Consult home">
+                <div class="brand-icon">W</div>
+
+                <div class="brand-name">
+                    WONDERFUL BUSINESS CONSULT
+                    <small>DESIGN • PRINT • CREATE</small>
+                </div>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#benefits">Why Choose Us</a></li>
+                <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO SECTION
+        ========================== -->
+
+        <section class="hero" id="home">
+
+            <div class="container hero-grid">
+
+                <div class="hero-content">
+
+                    <div class="hero-badge">
+                        ✦ YOUR CREATIVE DESIGN & PRINTING PARTNER
+                    </div>
+
+                    <h1>
+                        Your Ideas.<br>
+                        Our Creativity.<br>
+                        <span>Wonderful Results.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Bring your ideas to life with professional graphic
+                        design and printing services. From business branding
+                        to church events, birthdays, weddings and corporate
+                        materials, Wonderful Business Consult is ready to
+                        help you make a lasting impression.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a
+                            class="btn btn-primary"
+                            href="https://wa.me/233591753956?text=Hello%20Wonderful%20Business%20Consult%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20your%20services."
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            💬 Get a Quote on WhatsApp
+                        </a>
+
+                        <a class="btn btn-secondary" href="#services">
+                            Explore Our Services →
+                        </a>
+
+                    </div>
+
+                    <div class="trust-points">
+                        <span>Creative Designs</span>
+                        <span>Printing Solutions</span>
+                        <span>Personal & Business Orders</span>
+                    </div>
+
+                </div>
+
+
+                <!-- CSS-created visual: no image file required -->
+
+                <div class="hero-visual">
+
+                    <div class="design-preview">
+
+                        <div class="preview-top">
+                            <small>WONDERFUL BUSINESS CONSULT</small>
+
+                            <h3>
+                                Creativity<br>
+                                That Speaks.
+                            </h3>
+
+                            <p>Designs that bring your vision to life.</p>
+                        </div>
+
+                        <div class="preview-bottom">
+
+                            <h4>What Can We Create for You?</h4>
+
+                            <p>
+                                Creative design and printing solutions
+                                for individuals, churches, businesses
+                                and special occasions.
+                            </p>
+
+                            <div class="preview-tags">
+                                <span>FLYERS</span>
+                                <span>T-SHIRTS</span>
+                                <span>BANNERS</span>
+                                <span>INVITATIONS</span>
+                                <span>PRINTING</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="floating-note">
+                        Let's Create Something Great!
+                        <span>Tell us what you need →</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SERVICES SECTION
+        ========================== -->
+
+        <section class="section services" id="services">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">OUR SERVICES</span>
+
+                    <h2>Everything You Need, All in One Place</h2>
+
+                    <p>
+                        From eye-catching designs to professional printing
+                        solutions, we help turn your ideas into materials
+                        you can proudly share, display and use.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+                    <article class="service-card">
+
+                        <div class="service-icon">🎨</div>
+
+                        <h3>Graphic Design</h3>
+
+                        <p>
+                            Creative flyers, posters, business cards,
+                            promotional graphics and other visual designs
+                            tailored to your needs.
+                        </p>
+
+                        <a
+                            class="service-link"
+                            href="https://wa.me/233591753956?text=Hello%2C%20I%20am%20interested%20in%20your%20graphic%20design%20services."
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Enquire Now →
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">👕</div>
+
+                        <h3>T-Shirt Design & Printing</h3>
+
+                        <p>
+                            Custom T-shirts for churches, ministries,
+                            businesses, schools, events, groups and
+                            special occasions.
+                        </p>
+
+                        <a
+                            class="service-link"
+                            href="https://wa.me/233591753956?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20T-shirt%20design%20and%20printing."
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Enquire Now →
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">🎉</div>
+
+                        <h3>Church & Event Designs</h3>
+
+                        <p>
+                            Church programmes, conference flyers,
+                            anniversary designs, worship events,
+                            prayer programmes and fundraising materials.
+                        </p>
+
+                        <a
+                            class="service-link"
+                            href="https://wa.me/233591753956?text=Hello%2C%20I%20need%20a%20church%20or%20event%20design."
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Enquire Now →
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">💌</div>
+
+                        <h3>Invitation Cards</h3>
+
+                        <p>
+                            Beautiful wedding invitations, birthday
+                            invitations, party invitations and other
+                            special-event cards.
+                        </p>
+
+                        <a
+                            class="service-link"
+                            href="https://wa.me/233591753956?text=Hello%2C%20I%20would%20like%20to%20order%20invitation%20cards."
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Enquire Now →
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">🏆</div>
+
+                        <h3>Citations, Prizes & Awards</h3>
+
+                        <p>
+                            Citations, plaques, medals, prizes and
+                            recognition materials for churches,
+                            institutions, businesses and special events.
+                        </p>
+
+                        <a
+                            class="service-link"
+                            href="https://wa.me/233591753956?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20citations%2C%20prizes%20or%20awards."
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Enquire Now →
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">🖨️</div>
+
+                        <h3>Banners, Envelopes & Printing</h3>
+
+                        <p>
+                            Promotional banners, branded envelopes,
+                            business stationery and other printing
+                            materials for your personal or business needs.
+                        </p>
+
+                        <a
+                            class="service-link"
+                            href="https://wa.me/233591753956?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20banners%2C%20envelopes%20or%20printing."
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Enquire Now →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT SECTION
+        ========================== -->
+
+        <section class="section about" id="about">
+
+            <div class="container about-grid">
+
+                <div class="about-visual">
+
+                    <div class="about-graphic">
+
+                        <div class="big-letter">W.</div>
+
+                        <h3>Ideas Into Reality</h3>
+
+                        <p>
+                            Wonderful Business Consult provides creative
+                            design and printing solutions to help individuals,
+                            businesses, churches and organisations communicate
+                            their messages with confidence.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <span class="section-label">ABOUT OUR BUSINESS</span>
+
+                    <h2>Your Vision Deserves a Wonderful Presentation</h2>
+
+                    <p>
+                        At Wonderful Business Consult, we believe that
+                        good design helps people communicate, celebrate,
+                        promote and build their brands.
+                    </p>
+
+                    <p>
+                        Whether you need a memorable birthday flyer,
+                        an elegant wedding invitation, a church event
+                        banner, a branded T-shirt or professional
+                        business materials, we are here to help bring
+                        your ideas to life.
+                    </p>
+
+                    <ul class="about-list">
+
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Creative solutions for personal and business needs.</span>
+                        </li>
+
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>A wide range of design and printing services.</span>
+                        </li>
+
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Personalised service based on your requirements.</span>
+                        </li>
+
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Convenient enquiries through WhatsApp, phone and email.</span>
+                        </li>
+
+                    </ul>
+
+                    <a
+                        class="btn btn-primary"
+                        href="https://wa.me/233591753956?text=Hello%20Wonderful%20Business%20Consult%2C%20I%20would%20like%20to%20discuss%20a%20project."
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Let's Discuss Your Project →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BENEFITS SECTION
+        ========================== -->
+
+        <section class="section benefits" id="benefits">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">WHY CHOOSE US?</span>
+
+                    <h2>Making Your Ideas Work for You</h2>
+
+                    <p>
+                        We aim to make your design and printing experience
+                        straightforward, convenient and focused on your needs.
+                    </p>
+
+                </div>
+
+
+                <div class="benefits-grid">
+
+                    <article class="benefit-card">
+
+                        <div class="benefit-icon">✨</div>
+
+                        <h3>Creative Approach</h3>
+
+                        <p>
+                            Designs tailored to your message, style,
+                            occasion and preferences.
+                        </p>
+
+                    </article>
+
+
+                    <article class="benefit-card">
+
+                        <div class="benefit-icon">📦</div>
+
+                        <h3>Variety of Services</h3>
+
+                        <p>
+                            Access different design and printing
+                            services through one business.
+                        </p>
+
+                    </article>
+
+
+                    <article class="benefit-card">
+
+                        <div class="benefit-icon">🤝</div>
+
+                        <h3>Personal Attention</h3>
+
+                        <p>
+                            Discuss your requirements and share your
+                            ideas before placing an order.
+                        </p>
+
+                    </article>
+
+
+                    <article class="benefit-card">
+
+                        <div class="benefit-icon">📱</div>
+
+                        <h3>Easy Communication</h3>
+
+                        <p>
+                            Contact us by WhatsApp, phone or email
+                            to discuss your next project.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CALL TO ACTION SECTION
+        ========================== -->
+
+        <section class="cta-section">
+
+            <div class="container cta-box">
+
+                <div>
+
+                    <h2>Ready to Bring Your Next Idea to Life?</h2>
+
+                    <p>
+                        Tell us what you need. Let's discuss your design,
+                        printing or branding project and work towards
+                        creating something wonderful.
+                    </p>
+
+                </div>
+
+                <a
+                    class="btn btn-primary"
+                    href="https://wa.me/233591753956?text=Hello%20Wonderful%20Business%20Consult%2C%20I%20am%20ready%20to%20discuss%20my%20project."
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Start Your Enquiry →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT SECTION
+        ========================== -->
+
+        <section class="section contact" id="contact">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">GET IN TOUCH</span>
+
+                    <h2>Let's Talk About Your Project</h2>
+
+                    <p>
+                        Contact Wonderful Business Consult for enquiries
+                        about our design, printing and branding services.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-grid">
+
+                    <!-- Contact information -->
+
+                    <div class="contact-info">
+
+                        <h3>Contact Information</h3>
+
+                        <p>
+                            We would be happy to hear from you.
+                            Reach out using any of the details below.
+                        </p>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-item-icon">📞</div>
+
+                            <div>
+                                <strong>Call Us</strong>
+
+                                <a href="tel:+233591753956">
+                                    059 175 3956
+                                </a>
+
+                                <br>
+
+                                <a href="tel:+233546274930">
+                                    054 627 4930
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-item-icon">✉️</div>
+
+                            <div>
+                                <strong>Email Address</strong>
+
+                                <a href="mailto:kwamemessenger@gmail.com">
+                                    kwamemessenger@gmail.com
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-item-icon">📍</div>
+
+                            <div>
+                                <strong>Our Location</strong>
+
+                                <span>
+                                    Juaso, Asante Akyem, Ghana
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            class="btn btn-primary"
+                            href="https://wa.me/233591753956?text=Hello%20Wonderful%20Business%20Consult."
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            💬 Chat With Us
+                        </a>
+
+                    </div>
+
+
+                    <!-- Enquiry form -->
+
+                    <form class="contact-form" id="contactForm">
+
+                        <h3>Send an Enquiry</h3>
+
+                        <p>
+                            Complete the form below to prepare your
+                            enquiry and send it to us through WhatsApp.
+                        </p>
+
+
+                        <div class="form-group">
+
+                            <label for="customerName">Your Name</label>
+
+                            <input
+                                type="text"
+                                id="customerName"
+                                name="customerName"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerPhone">Phone Number</label>
+
+                            <input
+                                type="tel"
+                                id="customerPhone"
+                                name="customerPhone"
+                                placeholder="Enter your phone number"
+                                autocomplete="tel"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="serviceType">Service Required</label>
+
+                            <select
+                                id="serviceType"
+                                name="serviceType"
+                                required>
+
+                                <option value="">Select a service</option>
+
+                                <option>Graphic Design</option>
+                                <option>T-Shirt Design & Printing</option>
+                                <option>Church Event Design</option>
+                                <option>Birthday Flyer</option>
+                                <option>Wedding Invitation</option>
+                                <option>Party Invitation</option>
+                                <option>Banners</option>
+                                <option>Envelopes</option>
+                                <option>Citations, Prizes & Awards</option>
+                                <option>Business Cards</option>
+                                <option>Other Printing Work</option>
+                                <option>Other Enquiry</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="projectDetails">
+                                Tell Us About Your Project
+                            </label>
+
+                            <textarea
+                                id="projectDetails"
+                                name="projectDetails"
+                                placeholder="Describe what you need, including quantity, size or preferred design, if known."
+                                required></textarea>
+
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary">
+                            Send Enquiry via WhatsApp →
+                        </button>
+
+                        <p class="form-note">
+                            Your enquiry will open in WhatsApp so you
+                            can review and send it.
+                        </p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <div>
+
+                <div class="footer-brand">
+                    WONDERFUL <span>BUSINESS CONSULT</span>
+                </div>
+
+                <p>
+                    Creative Design & Printing Solutions | Juaso, Ghana
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+
+                <a href="#services">Services</a>
+
+                <a href="#about">About</a>
+
+                <a href="#contact">Contact</a>
+
+            </div>
+
+
+            <p>
+                © <span id="currentYear"></span>
+                Wonderful Business Consult.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         FLOATING WHATSAPP BUTTON
+    ========================== -->
+
+    <a
+        class="whatsapp-float"
+        href="https://wa.me/233591753956?text=Hello%20Wonderful%20Business%20Consult%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contact Wonderful Business Consult on WhatsApp">
+
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            aria-hidden="true">
+
+            <path d="M16 .5C7.45.5.5 7.4.5 15.9c0 2.7.72 5.34 2.08 7.65L.5 31.5l8.17-2.14a15.5 15.5 0 0 0 7.32 1.84h.01c8.54 0 15.5-6.94 15.5-15.45C31.5 7.25 24.54.5 16 .5Zm0 27.99h-.01a12.9 12.9 0 0 1-6.57-1.8l-.47-.28-4.85 1.27 1.3-4.73-.31-.49a12.85 12.85 0 0 1-1.97-6.86C3.12 8.53 8.9 2.8 16 2.8s12.88 5.73 12.88 12.8S23.1 28.49 16 28.49Zm7.07-9.6c-.39-.2-2.29-1.13-2.64-1.26-.35-.13-.61-.2-.87.2-.26.4-1 1.26-1.22 1.52-.22.26-.45.3-.84.1-.39-.2-1.65-.61-3.14-1.94-1.16-1.03-1.94-2.3-2.16-2.69-.22-.4-.02-.61.17-.8.18-.17.39-.45.58-.67.2-.22.26-.39.39-.65.13-.26.07-.49-.03-.68-.1-.2-.87-2.09-1.19-2.86-.31-.75-.63-.65-.87-.66h-.74c-.26 0-.68.1-1.03.49-.36.4-1.35 1.32-1.35 3.2 0 1.89 1.38 3.72 1.57 3.98.2.26 2.72 4.15 6.6 5.82.92.4 1.64.64 2.2.82.92.29 1.75.25 2.41.15.74-.11 2.29-.93 2.61-1.83.32-.9.32-1.67.22-1.83-.1-.16-.35-.26-.74-.46Z"/>
+
+        </svg>
+
+    </a>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        // Mobile navigation toggle
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", function () {
+
+            const isOpen = navLinks.classList.toggle("active");
+
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+
+        });
+
+
+        // Close the mobile menu after selecting a section
+
+        document.querySelectorAll("#navLinks a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navLinks.classList.remove("active");
+
+                menuToggle.setAttribute("aria-expanded", "false");
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+
+                menuToggle.textContent = "☰";
+
+            });
+
+        });
+
+
+        // Display the current year automatically
+
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+
+
+        // Prepare customer enquiries for WhatsApp
+
+        document.getElementById("contactForm").addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+                const name = document
+                    .getElementById("customerName")
+                    .value.trim();
+
+                const phone = document
+                    .getElementById("customerPhone")
+                    .value.trim();
+
+                const service = document
+                    .getElementById("serviceType")
+                    .value;
+
+                const details = document
+                    .getElementById("projectDetails")
+                    .value.trim();
+
+
+                if (!name || !phone || !service || !details) {
+
+                    alert("Please complete all the required fields.");
+
+                    return;
+
+                }
+
+
+                const message =
+                    "Hello Wonderful Business Consult!\n\n" +
+                    "I would like to make an enquiry.\n\n" +
+                    "Name: " + name + "\n" +
+                    "Phone: " + phone + "\n" +
+                    "Service Required: " + service + "\n" +
+                    "Project Details: " + details + "\n\n" +
+                    "Please provide further information and a quotation. Thank you.";
+
+
+                const whatsappURL =
+                    "https://wa.me/233591753956?text=" +
+                    encodeURIComponent(message);
+
+
+                window.open(whatsappURL, "_blank", "noopener,noreferrer");
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
